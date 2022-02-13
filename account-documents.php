@@ -45,9 +45,9 @@
                             >
                                 <div class="d-md-flex align-items-stretch">
                                     <div style="flex: 1; background: rgba(0, 0, 0, 0.06);">
-                                        <div class="p-4"  x-data="{type: 0}">
+                                        <div class="p-4"  x-data="{type: null}">
                                             <select name="" id="" class="form-control rounded" x-model="type">
-                                                <option value="" selected="" disabled=""> Document Type </option>
+                                                <option> Document Type </option>
                                                 <optgroup label="Proof of ID" data-description="proof-of-id-text">
                                                     <option value="0">National Identity Card</option>
                                                     <option value="1">Passport</option>
@@ -210,7 +210,7 @@
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
                                         <div>
-                                            <h5>Customer Account Agreement</h5>
+                                            <h5>All Documents</h5>
                                             <span>1 files</span>
                                         </div>
                                     </div>
@@ -228,24 +228,6 @@
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
                                         <div>
-                                            <h5>All Documents</h5>
-                                            <span>20 files</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
-                                        <div style="
-                                            width: 70px;
-                                            height: 70px;
-                                            background: #36517E;
-                                            border-radius: 10px;
-                                        "
-                                            class="d-flex align-items-center justify-content-center mr-4"
-                                        >
-                                            <img src="./assets/icons/document1.svg" alt="">
-                                        </div>
-                                        <div>
                                             <h5>Customer Account Agreement</h5>
                                             <span>20 files</span>
                                         </div>
@@ -301,6 +283,24 @@
                                         </div>
                                         <div>
                                             <h5>Passport</h5>
+                                            <span>20 files</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
+                                        <div style="
+                                            width: 70px;
+                                            height: 70px;
+                                            background: #36517E;
+                                            border-radius: 10px;
+                                        "
+                                            class="d-flex align-items-center justify-content-center mr-4"
+                                        >
+                                            <img src="./assets/icons/document1.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>National ID</h5>
                                             <span>20 files</span>
                                         </div>
                                     </div>
