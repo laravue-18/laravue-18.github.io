@@ -114,10 +114,11 @@
                                     <div class="row mb-3">
                                         <label class="col-4 col-form-label">Account Group</label>
                                         <div class="col-7">
-                                            <select class="form-control" x-model="accountGroup">
+                                            <input type="text" class="form-control" x-model="accountGroup" @click="isAccountGroupModalOpen=true">
+                                            <!-- <select class="form-control" x-model="accountGroup">
                                                 <option value="fixed-spread-account">Fixed Spread Account</option>
                                                 <option value="variable-spread-account">Variable Spread Account</option>
-                                            </select>
+                                            </select> -->
                                         </div>
                                         <div class="col-1 d-flex align-items-center pl-0">
                                             <img src="./assets/icons/help.svg" x-on:click="isAccountGroupModalOpen=true">
