@@ -28,21 +28,22 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <div class="etc-card-1">
-                            <h4><img src="./assets/icons/card-title.svg" alt="">ACCOUNT DETAILS</h4>
+                        <div class="main-card">
+                            <div class="main-card-header">
+                                <h4><img src="./assets/icons/card-title.svg" alt="">ACCOUNT DETAILS</h4>
+                            </div>
 
-                            <p class="" style="background: rgba(0, 0, 0, 0.08); border-top: 3px solid #F8C12C;"></p>
-
-                            <form x-data="{edit: false}">
+                            <form x-data="{edit: false}" class="mt-4">
                                 <div class="d-flex align-items-center">
                                     <h4 class="font-weight-bold font-size-18 mb-0">General Information</h4>
                                     <button 
+                                        x-show="!edit"
                                         class="btn btn-sm btn-rounded etc-btn-1 waves-effect waves-light font-size-12 font-weight-bold px-3 py-1 mx-3"
                                         @click.prevent = "edit = true"
                                     >
                                         Edit
                                     </button>
-                                    <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
+                                    <div class="etc-bg-gray ml-3" style="flex: 1; height: 10px;"></div>
                                 </div>
                         
                                 <div class="row mt-3">
@@ -99,33 +100,11 @@
                                     </div>
                                 </div>
 
-                                <template x-if="edit">
-                                    <div>
-                                        <button 
-                                            class="btn etc-btn-1 waves-effect waves-light font-size-12 font-weight-bold px-3 py-1 mr-3"
-                                        >
-                                            Save
-                                        </button>
-                                        <button 
-                                            class="btn etc-btn-1 etc-bg-gray waves-effect waves-light font-size-12 font-weight-bold px-3 py-1 mr-3"
-                                            @click = "edit = false"
-                                        >
-                                            Cancel
-                                        </button>
-                                    </div>
-                                </template>
-                            </form>
+                                <hr>
 
-                            <hr>
-
-                            <form x-data="{edit: false}">
                                 <div class="d-flex align-items-center">
                                     <h4 class="font-weight-bold font-size-18 mb-0">Address Information</h4>
-                                    <button 
-                                        class="btn btn-sm btn-rounded etc-btn-1 waves-effect waves-light font-size-12 font-weight-bold px-3 py-1 mx-3"
-                                        @click.prevent="edit=true"  
-                                    >Edit</button>
-                                    <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
+                                    <div class="etc-bg-gray ml-3" style="flex: 1; height: 10px;"></div>
                                 </div>
                         
                                 <div class="row mt-3">
