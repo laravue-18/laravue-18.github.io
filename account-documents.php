@@ -178,6 +178,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -194,8 +195,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -212,8 +215,10 @@
                                             <span>1 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -230,8 +235,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -248,8 +255,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -266,8 +275,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -284,8 +295,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -302,8 +315,10 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-6 mb-3">
+                                    <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
                                             width: 70px;
@@ -320,6 +335,7 @@
                                             <span>20 files</span>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
 
