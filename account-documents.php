@@ -36,7 +36,7 @@
                             }"
                         >
                             <div
-                                class="etc-modal card p-0 overflow-hidden"
+                                class="etc-modal main-card p-0 overflow-hidden"
                                 role="dialog"
                                 tabindex="-1"
                                 x-show="isModalOpen"
@@ -131,26 +131,26 @@
                                             </div>
 
                                             <div class="p-5">
-                                                <div>
-                                                    <form action="#" class="dropzone" @click="isModalOpen=true">
-                                                        <div class="fallback">
-                                                            <input name="file" type="file" multiple="multiple">
+                                                <div id="dropContainer" class="drop-container">
+                                                    <div class="text-center">
+                                                        <div class="mb-3">
+                                                            <img src="assets/images/upload.jpeg" alt="" style="width: 85px;">
                                                         </div>
-                                                        <div class="dz-message needsclick">
-                                                            <div class="mb-3">
-                                                                <img src="assets/images/upload.jpeg" alt="" style="width: 85px;">
-                                                            </div>
-                                                            
-                                                            <h4>Drag and drop your files here or</h4>
-                                                            <button type="button" 
-                                                                class="btn etc-btn-1 text-dark waves-effect waves-light font-size-14 font-weight-bold my-4"
-                                                            >
-                                                                Browse File
-                                                            </button>
-                                                            <p class="font-size-12 mb-1"> File Type .pdf, .gif, .png, .doc, .docx, .jpeg and .jpg </p>
-                                                            <p class="font-size-12 mb-1">Max File Size 12 Mb.</p>
+                                                        <div class="files-name"></div>
+
+                                                        <hr class="upload-container-hr">
+                                                        
+                                                        <h4 class="mb-4">Drag and drop your files here or</h4>
+
+                                                        <div class="browse-button-container mb-4">
+                                                            <input type="file" class="file-input" id="fileInput" style="display: none;">
+                                                            <button type="button" class="btn btn-primary file-button">Browse File</button><br>
                                                         </div>
-                                                    </form>
+                                                        <div>
+                                                            <p> File Type: .pdf, .gif, .png, .doc, .docx, .jpeg and .jpg</p>
+                                                            <p> Max File Size 12 Mb. </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                 
                                             </div>
@@ -355,9 +355,45 @@
 
         <?php include 'layouts-scripts.php'; ?>
 
-        <script src="assets/libs/dropzone/min/dropzone.min.js"></script> 
+        <script>
+            $(document).ready(function(){
+                $(document).on('click','.file-button', function() {
+                    $('.file-input').click();
+                });
+
+                $(document).on('change','.file-input', function() {
+                    var filenames = '';
+                    for (var i = 0; i < this.files.length; i++) {
+                        filenames += this.files[i].name + ', ';
+                    }
+                    $(".files-name").html(filenames.slice(0, -2));
+
+                });
+
+                dropContainer.ondragover = dropContainer.ondragenter = function(evt) {
+                  evt.preventDefault();
+                };
+
+                dropContainer.ondrop = function(evt) {
+                  // pretty simple -- but not for IE
+                  fileInput.files = evt.dataTransfer.files;
+
+                  // If you want to use some of the dropped files
+                  const dT = new DataTransfer();
+                  dT.items.add(evt.dataTransfer.files[0]);
+                  // dT.items.add(evt.dataTransfer.files[3]);
+                  fileInput.files = dT.files;
+                  $('#fileInput').change();
+                  evt.preventDefault();
+                };
+            })
+                // Dropzone.autoDiscover = false;
+    
+        </script>
 
         <script src="assets/js/app.js"></script>
+
+        
 
     </body>
 </html>
