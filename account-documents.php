@@ -30,13 +30,13 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <div class="etc-card-1 position-relative"
+                        <div class="main-card position-relative"
                             x-data="{
                                 'isModalOpen': false
                             }"
                         >
                             <div
-                                class="etc-modal etc-card-1 p-0 overflow-hidden"
+                                class="etc-modal card p-0 overflow-hidden"
                                 role="dialog"
                                 tabindex="-1"
                                 x-show="isModalOpen"
@@ -167,16 +167,14 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="main-card-header d-flex justify-content-between align-items-center">
                                 <h4><img src="./assets/icons/card-title.svg" alt="">DOCUMENTS</h4>
-                                <button type="button" class="btn etc-btn-1 text-dark waves-effect waves-light mb-1 font-size-14 font-weight-bold"
+                                <button type="button" class="btn btn-primary"
                                     @click="isModalOpen = true"
                                 >
                                     Add Document
                                 </button>
                             </div>
-
-                            <p class="" style="background: rgba(0, 0, 0, 0.08); border-top: 3px solid #36517E;"></p>
 
                             <div class="row mt-3">
                                 <div class="col-lg-6 mb-3">
