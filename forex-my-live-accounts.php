@@ -27,30 +27,60 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
+                        <div class="main-card-header mb-4"> 
+                            <h4 class="px-2">
+                                <img src="./assets/icons/card-title.svg" alt=""> DEMO ACCOUNTS
+                            </h4>
+                        </div>
 
-                        <h4 class="mx-3 py-2 mb-4" style="border-bottom: 1px solid #F8C12C;">
-                            <img src="./assets/icons/card-title.svg" alt=""> DEMO ACCOUNTS
-                        </h4>
-                        <div class="etc-card-1">
-
-                            <div class="d-flex justify-content-between align-items-center" style="border-bottom: 1px solid rgba(0, 0, 0, 0.4);">
+                        <div class="main-card">
+                            <div class="main-card-header d-flex justify-content-between align-items-center" style="border-bottom: 1px solid rgba(0, 0, 0, 0.4);">
                                 <h4>
                                     <img src="./assets/images/img2.png" alt=""> MT4 Accounts
                                 </h4>
-                                <button type="button" class="btn etc-btn-1 text-dark waves-effect waves-light mb-1 font-size-14 font-weight-bold">
+                                <button type="button" class="btn btn-primary">
                                     + OPEN NEW DEMO ACCOUNT
                                 </button>
                             </div>
                             
                             <div class="row mt-4">
-                                <div class="col-md-4 col-lg-3">
-                                    <div class="border overflow-hidden" style="border-radius: 10px;">
-                                        <div class="etc-bg-1 d-flex justify-content-between p-2">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="account-card">
+                                        <div class="header py-2 px-3">
                                             <div>
-                                                <h6 class="text-white font-weight-bold font-size-12 mb-1">TRADING ACCOUNT</h5>
-                                                <h6 class="text-white font-weight-normal font-size-12 mb-0">MT4 Demo 30919111</h5>
+                                                <h5>TRADING ACCOUNT</h5>
+                                                <h6>MT4 Demo 30919111</h6>
                                             </div>
-                                            <img src="./assets/icons/gear.svg" alt="">
+                                            <div class="position-relative"
+                                                x-data="{open: false}"
+                                                @mouseover="open=true"
+                                                @mouseover.away="open=false"
+                                            >
+                                                <img 
+                                                    src="./assets/icons/gear.svg" alt=""
+                                                    style="cursor: pointer"
+                                                >
+                                                <div x-show="open" class="position-absolute p-2" style="background:#36517E; border-radius: 5px; width: 150px; top:95%; right: -10px;" x-cloak x-transition>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2.40625 4.8125C2.31508 4.8125 2.22765 4.84872 2.16318 4.91318C2.09872 4.97765 2.0625 5.06508 2.0625 5.15625V9.28125C2.0625 9.37242 2.09872 9.45985 2.16318 9.52432C2.22765 9.58878 2.31508 9.625 2.40625 9.625H8.59375C8.68492 9.625 8.77235 9.58878 8.83682 9.52432C8.90128 9.45985 8.9375 9.37242 8.9375 9.28125V5.15625C8.9375 5.06508 8.90128 4.97765 8.83682 4.91318C8.77235 4.84872 8.68492 4.8125 8.59375 4.8125H2.40625ZM2.40625 4.125H8.59375C8.86725 4.125 9.12956 4.23365 9.32295 4.42705C9.51635 4.62044 9.625 4.88275 9.625 5.15625V9.28125C9.625 9.55475 9.51635 9.81706 9.32295 10.0105C9.12956 10.2039 8.86725 10.3125 8.59375 10.3125H2.40625C2.13275 10.3125 1.87044 10.2039 1.67705 10.0105C1.48365 9.81706 1.375 9.55475 1.375 9.28125V5.15625C1.375 4.88275 1.48365 4.62044 1.67705 4.42705C1.87044 4.23365 2.13275 4.125 2.40625 4.125Z" fill="white"/>
+                                                            <path d="M5.5 5.84375C5.59117 5.84375 5.6786 5.87997 5.74307 5.94443C5.80753 6.0089 5.84375 6.09633 5.84375 6.1875V8.25C5.84375 8.34117 5.80753 8.4286 5.74307 8.49307C5.6786 8.55753 5.59117 8.59375 5.5 8.59375C5.40883 8.59375 5.3214 8.55753 5.25693 8.49307C5.19247 8.4286 5.15625 8.34117 5.15625 8.25V6.1875C5.15625 6.09633 5.19247 6.0089 5.25693 5.94443C5.3214 5.87997 5.40883 5.84375 5.5 5.84375ZM7.5625 4.125V3.4375C7.5625 2.89049 7.3452 2.36589 6.95841 1.97909C6.57161 1.5923 6.04701 1.375 5.5 1.375C4.95299 1.375 4.42839 1.5923 4.04159 1.97909C3.6548 2.36589 3.4375 2.89049 3.4375 3.4375V4.125H7.5625ZM5.5 0.6875C6.22935 0.6875 6.92882 0.977231 7.44454 1.49296C7.96027 2.00868 8.25 2.70815 8.25 3.4375V4.8125H2.75V3.4375C2.75 2.70815 3.03973 2.00868 3.55546 1.49296C4.07118 0.977231 4.77065 0.6875 5.5 0.6875Z" fill="white"/>
+                                                        </svg>
+                                                        Change Password
+                                                    </a>
+                                                    <br>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.125 4.125H4.8125V8.25H4.125V4.125Z" fill="white"/>
+                                                            <path d="M6.1875 4.125H6.875V8.25H6.1875V4.125Z" fill="white"/>
+                                                            <path d="M1.375 2.0625V2.75H2.0625V9.625C2.0625 9.80734 2.13493 9.9822 2.26386 10.1111C2.3928 10.2401 2.56766 10.3125 2.75 10.3125H8.25C8.43234 10.3125 8.6072 10.2401 8.73614 10.1111C8.86507 9.9822 8.9375 9.80734 8.9375 9.625V2.75H9.625V2.0625H1.375ZM2.75 9.625V2.75H8.25V9.625H2.75Z" fill="white"/>
+                                                            <path d="M4.125 0.6875H6.875V1.375H4.125V0.6875Z" fill="white"/>
+                                                        </svg>
+
+                                                        Delete Account
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="p-2">
                                             <div class="d-flex mb-2">
@@ -106,7 +136,7 @@
                                                 <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
                                             </div>
                                         </div>
-                                        <div class="etc-bg-4 p-2">
+                                        <div class="card-footer py-3">
                                             <h5 class="text-center font-weight-bold m-0 font-size-14">
                                                 <img src="./assets/icons/fund-now.svg" alt="" style="margin-top: -4px;">
                                                 FUND NOW
@@ -114,14 +144,43 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-3">
-                                    <div class="border overflow-hidden" style="border-radius: 10px;">
-                                        <div class="etc-bg-1 d-flex justify-content-between p-2">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="account-card">
+                                        <div class="header py-2 px-3">
                                             <div>
-                                                <h6 class="text-white font-weight-bold font-size-12 mb-1">TRADING ACCOUNT</h5>
-                                                <h6 class="text-white font-weight-normal font-size-12 mb-0">MT4 Demo 30919111</h5>
+                                                <h5>TRADING ACCOUNT</h5>
+                                                <h6>MT4 Demo 30919111</h6>
                                             </div>
-                                            <img src="./assets/icons/gear.svg" alt="">
+                                            <div class="position-relative"
+                                                x-data="{open: false}"
+                                                @mouseover="open=true"
+                                                @mouseover.away="open=false"
+                                            >
+                                                <img 
+                                                    src="./assets/icons/gear.svg" alt=""
+                                                    style="cursor: pointer"
+                                                >
+                                                <div x-show="open" class="position-absolute p-2" style="background:#36517E; border-radius: 5px; width: 150px; top:95%; right: -10px;" x-cloak x-transition>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2.40625 4.8125C2.31508 4.8125 2.22765 4.84872 2.16318 4.91318C2.09872 4.97765 2.0625 5.06508 2.0625 5.15625V9.28125C2.0625 9.37242 2.09872 9.45985 2.16318 9.52432C2.22765 9.58878 2.31508 9.625 2.40625 9.625H8.59375C8.68492 9.625 8.77235 9.58878 8.83682 9.52432C8.90128 9.45985 8.9375 9.37242 8.9375 9.28125V5.15625C8.9375 5.06508 8.90128 4.97765 8.83682 4.91318C8.77235 4.84872 8.68492 4.8125 8.59375 4.8125H2.40625ZM2.40625 4.125H8.59375C8.86725 4.125 9.12956 4.23365 9.32295 4.42705C9.51635 4.62044 9.625 4.88275 9.625 5.15625V9.28125C9.625 9.55475 9.51635 9.81706 9.32295 10.0105C9.12956 10.2039 8.86725 10.3125 8.59375 10.3125H2.40625C2.13275 10.3125 1.87044 10.2039 1.67705 10.0105C1.48365 9.81706 1.375 9.55475 1.375 9.28125V5.15625C1.375 4.88275 1.48365 4.62044 1.67705 4.42705C1.87044 4.23365 2.13275 4.125 2.40625 4.125Z" fill="white"/>
+                                                            <path d="M5.5 5.84375C5.59117 5.84375 5.6786 5.87997 5.74307 5.94443C5.80753 6.0089 5.84375 6.09633 5.84375 6.1875V8.25C5.84375 8.34117 5.80753 8.4286 5.74307 8.49307C5.6786 8.55753 5.59117 8.59375 5.5 8.59375C5.40883 8.59375 5.3214 8.55753 5.25693 8.49307C5.19247 8.4286 5.15625 8.34117 5.15625 8.25V6.1875C5.15625 6.09633 5.19247 6.0089 5.25693 5.94443C5.3214 5.87997 5.40883 5.84375 5.5 5.84375ZM7.5625 4.125V3.4375C7.5625 2.89049 7.3452 2.36589 6.95841 1.97909C6.57161 1.5923 6.04701 1.375 5.5 1.375C4.95299 1.375 4.42839 1.5923 4.04159 1.97909C3.6548 2.36589 3.4375 2.89049 3.4375 3.4375V4.125H7.5625ZM5.5 0.6875C6.22935 0.6875 6.92882 0.977231 7.44454 1.49296C7.96027 2.00868 8.25 2.70815 8.25 3.4375V4.8125H2.75V3.4375C2.75 2.70815 3.03973 2.00868 3.55546 1.49296C4.07118 0.977231 4.77065 0.6875 5.5 0.6875Z" fill="white"/>
+                                                        </svg>
+                                                        Change Password
+                                                    </a>
+                                                    <br>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.125 4.125H4.8125V8.25H4.125V4.125Z" fill="white"/>
+                                                            <path d="M6.1875 4.125H6.875V8.25H6.1875V4.125Z" fill="white"/>
+                                                            <path d="M1.375 2.0625V2.75H2.0625V9.625C2.0625 9.80734 2.13493 9.9822 2.26386 10.1111C2.3928 10.2401 2.56766 10.3125 2.75 10.3125H8.25C8.43234 10.3125 8.6072 10.2401 8.73614 10.1111C8.86507 9.9822 8.9375 9.80734 8.9375 9.625V2.75H9.625V2.0625H1.375ZM2.75 9.625V2.75H8.25V9.625H2.75Z" fill="white"/>
+                                                            <path d="M4.125 0.6875H6.875V1.375H4.125V0.6875Z" fill="white"/>
+                                                        </svg>
+
+                                                        Delete Account
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="p-2">
                                             <div class="d-flex mb-2">
@@ -177,7 +236,7 @@
                                                 <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
                                             </div>
                                         </div>
-                                        <div class="etc-bg-4 p-2">
+                                        <div class="card-footer py-3">
                                             <h5 class="text-center font-weight-bold m-0 font-size-14">
                                                 <img src="./assets/icons/fund-now.svg" alt="" style="margin-top: -4px;">
                                                 FUND NOW
@@ -185,14 +244,43 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-3">
-                                    <div class="border overflow-hidden" style="border-radius: 10px;">
-                                        <div class="etc-bg-1 d-flex justify-content-between p-2">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="account-card">
+                                        <div class="header py-2 px-3">
                                             <div>
-                                                <h6 class="text-white font-weight-bold font-size-12 mb-1">TRADING ACCOUNT</h5>
-                                                <h6 class="text-white font-weight-normal font-size-12 mb-0">MT4 Demo 30919111</h5>
+                                                <h5>TRADING ACCOUNT</h5>
+                                                <h6>MT4 Demo 30919111</h6>
                                             </div>
-                                            <img src="./assets/icons/gear.svg" alt="">
+                                            <div class="position-relative"
+                                                x-data="{open: false}"
+                                                @mouseover="open=true"
+                                                @mouseover.away="open=false"
+                                            >
+                                                <img 
+                                                    src="./assets/icons/gear.svg" alt=""
+                                                    style="cursor: pointer"
+                                                >
+                                                <div x-show="open" class="position-absolute p-2" style="background:#36517E; border-radius: 5px; width: 150px; top:95%; right: -10px;" x-cloak x-transition>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2.40625 4.8125C2.31508 4.8125 2.22765 4.84872 2.16318 4.91318C2.09872 4.97765 2.0625 5.06508 2.0625 5.15625V9.28125C2.0625 9.37242 2.09872 9.45985 2.16318 9.52432C2.22765 9.58878 2.31508 9.625 2.40625 9.625H8.59375C8.68492 9.625 8.77235 9.58878 8.83682 9.52432C8.90128 9.45985 8.9375 9.37242 8.9375 9.28125V5.15625C8.9375 5.06508 8.90128 4.97765 8.83682 4.91318C8.77235 4.84872 8.68492 4.8125 8.59375 4.8125H2.40625ZM2.40625 4.125H8.59375C8.86725 4.125 9.12956 4.23365 9.32295 4.42705C9.51635 4.62044 9.625 4.88275 9.625 5.15625V9.28125C9.625 9.55475 9.51635 9.81706 9.32295 10.0105C9.12956 10.2039 8.86725 10.3125 8.59375 10.3125H2.40625C2.13275 10.3125 1.87044 10.2039 1.67705 10.0105C1.48365 9.81706 1.375 9.55475 1.375 9.28125V5.15625C1.375 4.88275 1.48365 4.62044 1.67705 4.42705C1.87044 4.23365 2.13275 4.125 2.40625 4.125Z" fill="white"/>
+                                                            <path d="M5.5 5.84375C5.59117 5.84375 5.6786 5.87997 5.74307 5.94443C5.80753 6.0089 5.84375 6.09633 5.84375 6.1875V8.25C5.84375 8.34117 5.80753 8.4286 5.74307 8.49307C5.6786 8.55753 5.59117 8.59375 5.5 8.59375C5.40883 8.59375 5.3214 8.55753 5.25693 8.49307C5.19247 8.4286 5.15625 8.34117 5.15625 8.25V6.1875C5.15625 6.09633 5.19247 6.0089 5.25693 5.94443C5.3214 5.87997 5.40883 5.84375 5.5 5.84375ZM7.5625 4.125V3.4375C7.5625 2.89049 7.3452 2.36589 6.95841 1.97909C6.57161 1.5923 6.04701 1.375 5.5 1.375C4.95299 1.375 4.42839 1.5923 4.04159 1.97909C3.6548 2.36589 3.4375 2.89049 3.4375 3.4375V4.125H7.5625ZM5.5 0.6875C6.22935 0.6875 6.92882 0.977231 7.44454 1.49296C7.96027 2.00868 8.25 2.70815 8.25 3.4375V4.8125H2.75V3.4375C2.75 2.70815 3.03973 2.00868 3.55546 1.49296C4.07118 0.977231 4.77065 0.6875 5.5 0.6875Z" fill="white"/>
+                                                        </svg>
+                                                        Change Password
+                                                    </a>
+                                                    <br>
+                                                    <a href="" class="text-white">
+                                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.125 4.125H4.8125V8.25H4.125V4.125Z" fill="white"/>
+                                                            <path d="M6.1875 4.125H6.875V8.25H6.1875V4.125Z" fill="white"/>
+                                                            <path d="M1.375 2.0625V2.75H2.0625V9.625C2.0625 9.80734 2.13493 9.9822 2.26386 10.1111C2.3928 10.2401 2.56766 10.3125 2.75 10.3125H8.25C8.43234 10.3125 8.6072 10.2401 8.73614 10.1111C8.86507 9.9822 8.9375 9.80734 8.9375 9.625V2.75H9.625V2.0625H1.375ZM2.75 9.625V2.75H8.25V9.625H2.75Z" fill="white"/>
+                                                            <path d="M4.125 0.6875H6.875V1.375H4.125V0.6875Z" fill="white"/>
+                                                        </svg>
+
+                                                        Delete Account
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="p-2">
                                             <div class="d-flex mb-2">
@@ -248,7 +336,7 @@
                                                 <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
                                             </div>
                                         </div>
-                                        <div class="etc-bg-4 p-2">
+                                        <div class="card-footer py-3">
                                             <h5 class="text-center font-weight-bold m-0 font-size-14">
                                                 <img src="./assets/icons/fund-now.svg" alt="" style="margin-top: -4px;">
                                                 FUND NOW
@@ -256,6 +344,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                         
@@ -284,7 +373,14 @@
 
         <?php include 'layouts-scripts.php'; ?>
 
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+
         <script src="assets/js/app.js"></script>
+
 
     </body>
 </html>

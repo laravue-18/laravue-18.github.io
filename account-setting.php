@@ -28,16 +28,16 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <div class="etc-card-1">
-                            <h4><img src="./assets/icons/card-title.svg" alt="">Settings</h4>
+                        <div class="main-card">
+                            <div class="main-card-header mb-4">
+                                <h4><img src="./assets/icons/card-title.svg" alt="">Settings</h4>
+                            </div>
 
-                            <p class="" style="background: rgba(0, 0, 0, 0.08); border-top: 3px solid #F8C12C;"></p>
-
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center mb-3">
                                 <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Login Information</h4>
                                 <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
                             </div>
-                            <div class="d-flex justify-content-between mt-4">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">
@@ -53,7 +53,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">
@@ -69,7 +69,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">
@@ -86,11 +86,11 @@
 
                             </div>
 
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center mb-3">
                                 <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Two-Factor Authentication</h4>
                                 <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
                             </div>
-                            <div class="d-flex justify-content-between mt-4">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">
@@ -103,7 +103,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">
@@ -116,7 +116,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div class="d-flex align-items-start" style="flex:3">
                                     <img src="./assets/icons/card-title.svg" alt="">
                                     <div class="ml-3">

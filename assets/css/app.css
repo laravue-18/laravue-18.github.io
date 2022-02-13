@@ -3388,11 +3388,59 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
   padding: 8px 0;
 }
 
+.account-card{
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.account-card:hover{
+  transform: translate(-2px, -2px);
+}
+
+.account-card .header{
+  background: rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-card .card-footer{
+  background: rgba(0, 0, 0, 0.06);
+}
+.account-card:hover .header{
+  background: #36517E;
+}
+
+.account-card:hover .card-footer{
+  background: #F8C12C;
+}
+
+.account-card .header h5{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+}
+.account-card:hover .header h5{
+  color: white;
+}
+
+.account-card .header h6{
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.account-card:hover .header h6{
+  color: white;
+}
+
 .etc-card-2{
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .etc-btn-1{
@@ -3456,12 +3504,22 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Buttons */
 a, a:hover{ color: inherit; }
-.btn-primary{
-  color: #000000;
-  background-color: #F8C12C;
-  border-color: #F8C12C;
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+  color: #000000 !important;
+  background-color: #F8C12C !important;
+  border-color: #F8C12C !important;
+  border-width: 2px;
   font-weight: 600;
   font-size: 14px;
+  outline: none;
+}
+.btn-primary:focus{
+  box-shadow: none;
+}
+
+.btn-primary:hover{
+  background: white !important;
+  color: #F8C12C !important;
 }
 
 .drop-container{
