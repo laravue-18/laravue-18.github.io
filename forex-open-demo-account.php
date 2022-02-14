@@ -28,14 +28,14 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <div class="etc-card-1 position-relative"
+                        <div class="main-card"
                             x-data="{
                                 'isAccountGroupModalOpen': false,
                                 'accountGroup' : 'fixed-spread-account',
                             }"
                         >
                             <div
-                                class="etc-modal etc-card-1"
+                                class="modal-card"
                                 role="dialog"
                                 tabindex="-1"
                                 x-show="isAccountGroupModalOpen"
@@ -51,7 +51,7 @@
                                 <div class="row mt-4">
                                     <div class="col-lg-3"></div>
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Fixed Spread Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$100</h2>
                                             <p class="text-center">minimum funding</p>
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Variable Spread Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$500</h2>
                                             <p class="text-center">minimum funding</p>

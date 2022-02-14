@@ -29,14 +29,14 @@
 
                     <div class="container-fluid">
 
-                        <div class="etc-card-1 position-relative"
+                        <div class="main-card"
                             x-data="{
                                 'isAccountGroupModalOpen': false,
                                 'accountGroup' : 'fixed-spread-account',
                             }"
                         >
                             <div
-                                class="etc-modal etc-card-1"
+                                class="modal-card"
                                 role="dialog"
                                 tabindex="-1"
                                 x-show="isAccountGroupModalOpen"
@@ -44,14 +44,14 @@
                                 x-transition
                                 x-cloak
                             >
-                                <div class="d-flex justify-content-between" style="border-bottom: 3px solid #F8C12C;">
+                                <div class="main-card-header d-flex justify-content-between">
                                     <h4 class="mb-0"><img src="./assets/icons/card-title.svg" alt="">ACCOUNT GROUPS</h4>
                                     <button class="btn p-0 mr-3" aria-label="Close" x-on:click="isAccountGroupModalOpen=false">✖</button>
                                 </div>
 
                                 <div class="row mt-4">
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Fixed Spread Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$100</h2>
                                             <p class="text-center">minimum funding</p>
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Variable Spread Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$500</h2>
                                             <p class="text-center">minimum funding</p>
@@ -97,7 +97,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Scalping Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$500</h2>
                                             <p class="text-center">minimum funding</p>
@@ -120,7 +120,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-sm-6 mb-3">
-                                        <div class="etc-card-2 px-2 py-4">
+                                        <div class="group-card px-2 py-4">
                                             <h5 class="text-center etc-text-black font-weight-bold">Bonus Account</h5>
                                             <h2 class="text-center etc-text-navy font-weight-bold font-size-30">$100</h2>
                                             <p class="text-center">minimum funding</p>
@@ -146,9 +146,12 @@
                                 
                             </div>
 
-                            <h4><img src="./assets/icons/card-title.svg" alt=""> OPEN LIVE ACCOUNT</h4>
+                            <div class="main-card-header">
+                                <h4><img src="./assets/icons/card-title.svg" alt=""> OPEN LIVE ACCOUNT</h4>
+                            </div>
 
-                            <p class="p-3 mb-4" style="background: rgba(0, 0, 0, 0.08); border-top: 3px solid #F8C12C;">
+
+                            <p class="p-3 mb-4" style="background: rgba(0, 0, 0, 0.08);">
                                 To open a Live trading account you must complete the form below nominating your account type, currency and account group. Once approved an email with your Live trading account login details will be automatically sent to you. Please remember to check your email or check Open Live Accounts 
                             </p>
 
