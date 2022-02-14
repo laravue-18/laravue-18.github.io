@@ -29,8 +29,104 @@
                     <div class="container-fluid">
 
                         <div class="main-card"
-                            x-data="{isEmailModalOpen: false, isPasswordModalOpen: false}"
+                            x-data="{
+                                isEmailModalOpen: false, 
+                                isPasswordModalOpen: false, 
+                                isBankModalOpen: false, 
+                                isConfirmModalOpen: false,
+                                isRecoveryModalOpen: false,
+                                enabled: null
+                            }"
                         >
+                            <div class="modal-card" role="dialog" tabindex="-1" 
+                                x-show="isRecoveryModalOpen" 
+                                @click.away="isRecoveryModalOpen = false" 
+                                x-cloak x-transition
+                            >
+                                <div class="main-card-header mb-4">
+                                    <h4><img src="./assets/icons/card-title.svg" alt="">RECOVERY CODES</h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="assets/images/qRCode.png" class="mb-4" alt="">
+                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                        <div>
+                                            <button class="btn btn-primary" @click="enabled='google'; isRecoveryModalOpen=false">REPLY</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-card" role="dialog" tabindex="-1" 
+                                x-show="isConfirmModalOpen" 
+                                @click.away="isConfirmModalOpen = false" 
+                                x-cloak x-transition
+                            >
+                                <div class="main-card-header mb-4">
+                                    <h4><img src="./assets/icons/card-title.svg" alt="">EMAIL CONFIRMATION</h4>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <div class="py-5">
+                                        <h4 class="text-center mb-3">OTP CONFIRMATION</h4>
+                                        <p class="mb-4">Kindly enter the OTP sent to your mail</p>
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                        </div>
+                                        <div class="mb-5">
+                                            <button class="btn btn-primary btn-block">Submit</button>
+                                        </div>
+                                        <p class="text-center">Did not get code? <span style="color: #F8C12C; cursor: pointer;">Resend</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-card" role="dialog" tabindex="-1" 
+                                x-show="isBankModalOpen" 
+                                @click.away="isBankModalOpen = false" 
+                                x-cloak x-transition
+                            >
+                                <div class="main-card-header mb-4">
+                                    <h4><img src="./assets/icons/card-title.svg" alt="">Contact With Bank</h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="row mb-3">
+                                            <label class="col-4 col-form-label">Email Address</label>
+                                            <div class="col-7">
+                                                <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3" x-data="{show: false}">
+                                            <label class="col-4 col-form-label">Password</label>
+                                            <div class="col-7">
+                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
+                                            </div>
+                                            <div class="col-1">
+                                                <span class="btn-icon">
+                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
+                                                        @click="show=!show"
+                                                    ></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label class="col-4 col-form-label"></label>
+                                            <div class="col-7">
+                                                <button class="btn btn-primary">SUBMIT</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="modal-card" role="dialog" tabindex="-1" 
                                 x-show="isEmailModalOpen" 
                                 @click.away="isEmailModalOpen = false" 
@@ -51,7 +147,9 @@
                                         <div class="row mb-3">
                                             <label class="col-4 col-form-label"></label>
                                             <div class="col-8">
-                                                <button class="btn etc-btn-1">UPDATE EMAIL ADDRESS</button>
+                                                <button class="btn btn-primary"
+                                                    @click="isConfirmModalOpen=true; isEmailModalOpen=false"
+                                                >UPDATE EMAIL ADDRESS</button>
                                             </div>
                                         </div>
                                     </div>
@@ -76,29 +174,39 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="row mb-3" x-data="{isShowing: false}">
+                                        <div class="row mb-3" x-data="{show: false}">
                                             <label class="col-4 col-form-label">New Password</label>
                                             <div class="col-7">
-                                            <input :type="isShowing ? 'text' :'password'" name="" id="" class="form-control etc-bg-gray" type="password">
+                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
                                             </div>
-                                            <div class="col-1 d-flex align-items-center pl-0">
-                                                <img src="./assets/icons/eye.svg" @click="isShowing = !isShowing">
+                                            <div class="col-1">
+                                                <span class="btn-icon">
+                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
+                                                        @click="show=!show"
+                                                    ></i>
+                                                </span>
                                             </div>
                                         </div>
-                                        <div class="row mb-3" x-data="{isShowing: false}">
+                                        <div class="row mb-3" x-data="{show: false}">
                                             <label class="col-4 col-form-label">Confirm Password</label>
                                             <div class="col-7">
-                                                <input :type="isShowing ? 'text' :'password'" name="" id="" class="form-control etc-bg-gray" type="password">
+                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
                                             </div>
-                                            <div class="col-1 d-flex align-items-center pl-0">
-                                                <img src="./assets/icons/eye.svg" @click="isShowing = !isShowing">
+                                            <div class="col-1">
+                                                <span class="btn-icon">
+                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
+                                                        @click="show=!show"
+                                                    ></i>
+                                                </span>
                                             </div>
                                         </div>
                                         
                                         <div class="row mb-3">
                                             <div class="col-4"></div>
                                             <div class="col-7">
-                                                <button type="button" class="btn etc-btn-1 waves-effect waves-light mb-1 font-size-14 font-weight-bold">UPDATE PASSWORD</button>
+                                                <button type="button" 
+                                                    class="btn etc-btn-1 waves-effect waves-light mb-1 font-size-14 font-weight-bold"
+                                                >UPDATE PASSWORD</button>
                                             </div>
                                         </div>
                                     </div>
@@ -162,7 +270,7 @@
                                     sam.smith@gmail.com
                                 </div>
                                 <div>
-                                    <a href="#" class="btn etc-btn-1 etc-bg-gray">Change</a>
+                                    <button class="btn etc-btn-1 etc-bg-gray" @click="isBankModalOpen=true">Change</button>
                                 </div>
 
                             </div>
@@ -172,7 +280,7 @@
                                 <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
                             </div>
                             
-                            <div x-data="{'enabled': null}">
+                            <div>
                                 <div class="d-md-flex justify-content-between mb-3">
                                     <div class="d-flex align-items-start" style="flex:3">
                                         <img src="./assets/icons/card-title.svg" alt="">
@@ -185,7 +293,7 @@
                                         <button class="btn" 
                                             :class="enabled=='google'?'btn-success':'btn-inactive'" 
                                             x-text="enabled=='google'?'Enabled':'Enable'"
-                                            @click="enabled='google'"
+                                            @click="isRecoveryModalOpen=true"
                                         ></button>
                                     </div>
     

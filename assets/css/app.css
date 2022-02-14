@@ -3382,11 +3382,11 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
   padding: 20px;
   border-radius: 10px;
   background: white;
-  position: absolute;
-  z-index: 2;
-  width: 98%;
+  position: fixed;
+  z-index: 1050;
+  /* width: 98%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .group-card{
@@ -3586,4 +3586,8 @@ a, a:hover{ color: inherit; }
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
+}
+.btn-icon{
+  display: block;
+  padding: 0.47rem 0;
 }

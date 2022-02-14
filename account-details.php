@@ -59,7 +59,7 @@
                                         <div class="row mb-3">
                                             <label class="col-4 col-form-label">Email</label>
                                             <div class="col-8">
-                                                <input type="email" name="" id="" class="form-control" value="sam.smith@gmail.com" :disabled="!edit">
+                                                <input type="email" name="" id="" class="form-control" value="sam.smith@gmail.com" disabled="true">
                                             </div>
                                         </div>
                                     </div>
