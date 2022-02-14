@@ -3382,11 +3382,11 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
   padding: 20px;
   border-radius: 10px;
   background: white;
-  position: fixed;
+  position: absolute;
   z-index: 1050;
-  /* width: 98%;
+  width: 98%;
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%);
 }
 
 .group-card{

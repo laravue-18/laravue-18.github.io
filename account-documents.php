@@ -32,11 +32,13 @@
 
                         <div class="main-card position-relative"
                             x-data="{
-                                'isModalOpen': true
+                                'isModalOpen': false
                             }"
                         >
                             <div
                                 class="modal-card main-card p-0 overflow-hidden"
+                                role="dialog"
+                                tabindex="-1"
                                 x-show="isModalOpen"
                                 x-transition
                                 x-cloak
