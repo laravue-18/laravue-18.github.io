@@ -67,7 +67,7 @@
                                         <div class="row mb-3">
                                             <label class="col-4 col-form-label">Country</label>
                                             <div class="col-8">
-                                                <select name="country" class="form-control" :diabled="!edit">
+                                                <select name="country" class="form-control" :disabled="!edit">
                                                     <option value="">Select</option>
                                                     <option value="Afganistan">Afghanistan</option>
                                                     <option value="Albania">Albania</option>
@@ -331,7 +331,7 @@
                                         <div class="row mb-3">
                                             <label class="col-4 col-form-label">Country Code</label>
                                             <div class="col-8">
-                                                <select name="country_code" class="form-control" :disabled="!open">
+                                                <select name="country_code" class="form-control" :disabled="!edit">
                                                     <option value="">Select</option>
 
                                                     <option data-countrycode="GB" value="44">UK (+44)</option>

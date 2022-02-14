@@ -70,7 +70,7 @@
 
                                             <template x-if="type==0 || type==1 || type==2">
                                                 <div class="pr-2">
-                                                    <h5 class="mt-4">e.g. Passport | National ID | Drivers Licence </h5>
+                                                    <h5 class="mt-4 mb-3">e.g. Passport | National ID | Drivers Licence </h5>
                                                     <div class="d-flex align-items-start mb-2">
                                                         <img src="assets/icons/charm_tick.svg" alt="" class="mr-3">
                                                         <p class="mb-0">
@@ -99,7 +99,7 @@
                                             </template>
                                             <template x-if="type==3 || type==4 || type==5 || type==6 || type==7">
                                                 <div class="pr-2">
-                                                    <h5 class="mt-4">e.g. Utility bill | Phone/Internet Bill | Bank </h5>
+                                                    <h5 class="mt-4 mb-3">e.g. Utility bill | Phone/Internet Bill | Bank </h5>
                                                     <div class="d-flex align-items-start mb-2">
                                                         <img src="assets/icons/charm_tick.svg" alt="" class="mr-3">
                                                         <p class="mb-0">
