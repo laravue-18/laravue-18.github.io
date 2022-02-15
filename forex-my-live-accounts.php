@@ -2,7 +2,6 @@
 <html lang="en">
 
     <head>
-        
         <meta charset="utf-8" />
         <title>Euro Trust Capital</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,7 @@
             <!-- Start right Content here -->
             <div class="main-content">
 
-                <div class="page-content">
+                <div class="page-content" id="vapp">
                     <div class="container-fluid">
                         <div class="main-card-header mb-4"> 
                             <h4 class="px-2">

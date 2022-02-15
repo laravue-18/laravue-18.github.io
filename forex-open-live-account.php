@@ -25,28 +25,15 @@
             <!-- Start right Content here -->
             <div class="main-content">
 
-                <div class="page-content">
+                <div class="page-content" id="vapp">
 
                     <div class="container-fluid">
 
-                        <div class="main-card"
-                            x-data="{
-                                'isAccountGroupModalOpen': false,
-                                'accountGroup' : 'fixed-spread-account',
-                            }"
-                        >
-                            <div
-                                class="modal-card"
-                                role="dialog"
-                                tabindex="-1"
-                                x-show="isAccountGroupModalOpen"
-                                x-on:click.away="isAccountGroupModalOpen = false"
-                                x-transition
-                                x-cloak
-                            >
-                                <div class="main-card-header d-flex justify-content-between">
+                        <div class="main-card" >
+
+                            <modal-dialog :show="isModalOpen" @close="isModalOpen=false">
+                                <div class="main-card-header">
                                     <h4 class="mb-0"><img src="./assets/icons/card-title.svg" alt="">ACCOUNT GROUPS</h4>
-                                    <button class="btn p-0 mr-3" aria-label="Close" x-on:click="isAccountGroupModalOpen=false">✖</button>
                                 </div>
 
                                 <div class="row mt-4">
@@ -68,7 +55,7 @@
                                             <p class="mb-2"><img src="./assets/icons/times.svg" alt="" class="ml-1 mb-1"> Scalping is not available</p>
                                             <div class="text-center mt-4">
                                                 <button type="button" class="btn etc-btn-1 waves-effect waves-light px-4"
-                                                    @click="accountGroup = 'fixed-spread-account'; isAccountGroupModalOpen = false"
+                                                    @click="accountGroup = 'fixed-spread-account'; isModalOpen = false"
                                                 >SELECT NOW</button>
                                             </div>
                                         </div>
@@ -91,7 +78,7 @@
                                             <p class="mb-2"><img src="./assets/icons/times.svg" alt="" class="ml-1 mb-1"> Scalping is not available</p>
                                             <div class="text-center mt-4">
                                                 <button type="button" class="btn etc-btn-1 waves-effect waves-light px-4"
-                                                    @click="accountGroup = 'variable-spread-account'; isAccountGroupModalOpen = false"
+                                                    @click="accountGroup = 'variable-spread-account'; isModalOpen = false"
                                                 >SELECT NOW</button>
                                             </div>
                                         </div>
@@ -114,7 +101,7 @@
                                             <p class="mb-2"><img src="./assets/icons/times.svg" alt="" class="ml-1 mb-1"> Scalping is not available</p>
                                             <div class="text-center mt-4">
                                                 <button type="button" class="btn etc-btn-1 waves-effect waves-light px-4"
-                                                    @click="accountGroup = 'scalping-account'; isAccountGroupModalOpen = false"
+                                                    @click="accountGroup = 'scalping-account'; isModalOpen = false"
                                                 >SELECT NOW</button>
                                             </div>
                                         </div>
@@ -137,14 +124,26 @@
                                             <p class="mb-2"><img src="./assets/icons/times.svg" alt="" class="ml-1 mb-1"> Scalping is not available</p>
                                             <div class="text-center mt-4">
                                                 <button type="button" class="btn etc-btn-1 waves-effect waves-light px-4"
-                                                    @click="accountGroup = 'bonus-account'; isAccountGroupModalOpen = false"
+                                                    @click="accountGroup = 'bonus-account'; isModalOpen = false"
                                                 >SELECT NOW</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                            </div>
+                            </modal-dialog>
+
+                            <modal-dialog :show="isTermsModalOpen" @close="isTermsModalOpen=false">
+                                <h4 class="mb-4">The Terms And Conditions</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus, tenetur ducimus iusto nobis aperiam dicta quae, ut est esse deserunt at sunt numquam. Neque ut eligendi quae dolor aspernatur.
+                                    Aspernatur minus, quae ipsum officia alias id dolore nihil laboriosam quod, quisquam modi ex laudantium esse qui placeat quasi doloremque, ipsam dicta totam! Sit dolores ipsa doloribus eius, repellendus illo.
+                                    Totam expedita, aliquam dolores commodi ut doloremque recusandae et numquam dolore molestiae quisquam praesentium eveniet velit natus iste maiores, quasi tempora exercitationem nulla vitae quae nostrum accusamus. Blanditiis, ducimus fuga!
+                                    Consectetur culpa nostrum quam iure odio. Facere excepturi inventore obcaecati natus. Quibusdam quo nobis repellendus nisi ullam iusto unde nulla aut quod! Aperiam voluptate explicabo, quasi molestiae accusamus vero magnam!
+                                    Maxime, voluptas? Ipsa amet rem deserunt commodi quod, laborum fuga officiis suscipit at error exercitationem repudiandae debitis quis quae. Quam necessitatibus distinctio sapiente maxime ipsum excepturi, fugiat quod aliquid molestias.
+                                </p>
+                            </modal-dialog>
 
                             <div class="main-card-header">
                                 <h4><img src="./assets/icons/card-title.svg" alt=""> OPEN LIVE ACCOUNT</h4>
@@ -160,25 +159,28 @@
                                     <div class="row mb-3">
                                         <label class="col-4 col-form-label">Account Type</label>
                                         <div class="col-7">
-                                        <select class="form-control">
-                                            <option value="">Individual</option>
-                                        </select>
+                                            <select class="form-control">
+                                                <option value="">Individual</option>
+                                            </select>
                                         </div>
                                        
                                     </div>
                                     <div class="row mb-3">
                                         <label class="col-4 col-form-label">Account Group</label>
                                         <div class="col-7">
-                                            <input type="text" class="form-control" x-model="accountGroup" @click.prevent="isAccountGroupModalOpen=true">
-                                            <!-- <select class="form-control" x-model="accountGroup" @click.prevent="isAccountGroupModalOpen=true" disabled>
-                                                <option value="fixed-spread-account">Fixed Spread Account</option>
-                                                <option value="variable-spread-account">Variable Spread Account</option>
-                                                <option value="scalping-account">Scalping Account</option>
-                                                <option value="bonus-account">Bonus Account</option>
-                                            </select> -->
+                                            <div @click="isModalOpen=true">
+                                                <select class="form-control" v-model="accountGroup" disabled>
+                                                    <option value="fixed-spread-account">Fixed Spread Account</option>
+                                                    <option value="variable-spread-account">Variable Spread Account</option>
+                                                    <option value="scalping-account">Scalping Account</option>
+                                                    <option value="bonus-account">Bonus Account</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="col-1 d-flex align-items-center pl-0">
-                                            <img src="./assets/icons/help.svg" x-on:click="isAccountGroupModalOpen=true">
+                                        <div class="col-1">
+                                            <div class="btn-icon">
+                                                <i class="far fa-question-circle font-size-22" @click="isModalOpen=true"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -195,7 +197,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="inlineFormCheck">
                                                 <label class="form-check-label" for="inlineFormCheck">
-                                                I agree <a href="#" class="etc-text-light"><u>the terms and conditions</u> </a> 
+                                                I agree <span class="etc-text-light" @click="isTermsModalOpen=true"><u>the terms and conditions</u> </span> 
                                                 </label>
                                             </div>
                                         </div>
@@ -238,6 +240,21 @@
         <?php include 'layouts-right-sidebar.php'; ?>
 
         <?php include 'layouts-scripts.php'; ?>
+
+        <?php include 'components/modal-dialog.php'; ?>
+
+        <script>
+            const vm = new Vue({
+                el: '#vapp',
+                data(){
+                    return {
+                        isModalOpen: false,
+                        isTermsModalOpen: false,
+                        accountGroup: 'fixed-spread-account'
+                    }
+                }
+            })
+        </script>
 
         <script src="assets/js/app.js"></script>
 

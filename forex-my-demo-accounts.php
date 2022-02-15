@@ -35,8 +35,8 @@
                             <div class="text-center">
                                 <img src="./assets/images/img1.png" alt="">
                             </div>
-                            <h3 class="text-center font-size-22">No Account Created Yet!</h3>
-                            <p class="text-center">
+                            <h3 class="text-center font-size-22 mb-4">No Account Created Yet!</h3>
+                            <p class="text-center mb-5">
                                 Get started by creating a new demo account. Created accounts will be displayed on this page.
                             </p>
                             <div class="text-center mb-5">

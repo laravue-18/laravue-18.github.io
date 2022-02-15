@@ -68,7 +68,6 @@
                     <li><a href="forex-funds-deposit.php">Deposit</a></li>
                     <li><a href="forex-funds-withdraw.php">Withdraw</a></li>
                     <li><a href="forex-funds-transfer.php">Transfer</a></li>
-                    <li><a href="forex-change-password.php">Change Password</a></li>
                     <li><a href="forex-agreement.php">Agreement</a></li>
                 </ul>
             </li>
