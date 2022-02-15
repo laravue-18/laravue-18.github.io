@@ -29,15 +29,11 @@
 
                 <div class="page-content" id="vapp">
                     <div class="container-fluid">
-
                         <div class="main-card position-relative"
                            
                         >
-                            <div
-                                class="modal-card main-card p-0 overflow-hidden"
-                                role="dialog"
-                                tabindex="-1"
-                                v-show="isModalOpen"
+                            <modal-dialog :show="isModalOpen"
+                                @close="closeModal"
                             >
                                 <div class="d-md-flex align-items-stretch">
                                     <div style="flex: 1; background: rgba(0, 0, 0, 0.06);">
@@ -117,16 +113,14 @@
                                                 </div>
                                             </template>
 
-                                            <textarea name="" id="" cols="30" rows="3" class="form-control mb-4" style= placeholder="Comment..."></textarea>
+                                            <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Comment..."></textarea>
                                         </div>
                                     </div>
                                     <div style="flex: 2">
                                         <div class="d-flex flex-column justify-content-between h-100">
-                                            <div class="d-flex justify-content-end">
-                                                <button class="btn" aria-label="Close" @click="isModalOpen=false">✖</button>  
-                                            </div>
+                                            <div></div>
 
-                                            <div class="p-5">
+                                            <div class="p-2">
                                                 <div id="dropContainer" class="drop-container">
                                                     <div class="text-center">
                                                         <div class="mb-3">
@@ -151,9 +145,10 @@
                 
                                             </div>
 
-                                            <div class="d-flex justify-content-end mr-5 p-2 px-4" style="background: rgba(0, 0, 0, 0.06);">
+                                            <div class="d-flex justify-content-end p-2">
                                                 <button type="button" 
                                                     class="btn etc-btn-1 text-dark waves-effect waves-light font-size-14 font-weight-bold"
+                                                    @click="closeModal"
                                                 >
                                                     Upload
                                                 </button>
@@ -161,7 +156,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </modal-dialog>
 
                             <div class="main-card-header d-flex justify-content-between align-items-center">
                                 <h4><img src="./assets/icons/card-title.svg" alt="">DOCUMENTS</h4>
@@ -359,6 +354,8 @@
 
         <?php include 'layouts-scripts.php'; ?>
 
+        <?php include 'components/modal-dialog.php'; ?>
+
         <script>
             const vm = new Vue({
                 el: '#vapp',
@@ -367,6 +364,13 @@
                         isModalOpen: false,
                         type: '',
 
+                    }
+                },
+                methods: {
+                    closeModal(){
+                        this.isModalOpen=false; 
+                        $('#fileInput').val(null);
+                        $('#fileInput').change();
                     }
                 }
             })

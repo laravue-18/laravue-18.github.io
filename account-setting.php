@@ -27,179 +27,132 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
-
                         <div class="main-card">
-                            <div class="modal-card" role="dialog" tabindex="-1" 
-                                v-show="isRecoveryModalOpen" 
-                            >
-                                <div class="main-card-header mb-4">
-                                    <h4><img src="./assets/icons/card-title.svg" alt="">RECOVERY CODES</h4>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="assets/images/qRCode.png" class="mb-4" alt="">
-                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
-                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
-                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
-                                        <input type="text" class="form-control mb-3" value="Lorem ipsum">
-                                        <div>
-                                            <button class="btn btn-primary" @click="enabled='google'; isRecoveryModalOpen=false">REPLY</button>
-                                        </div>
+                            <!-- Modals -->
+                            <div>
+                                <modal-dialog :show="isRecoveryModalOpen" v-on:close="isRecoveryModalOpen=false">
+                                    <div class="main-card-header mb-4">
+                                        <h4><img src="./assets/icons/card-title.svg" alt="">RECOVERY CODES</h4>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="modal-card" role="dialog" tabindex="-1" 
-                                v-show="isConfirmModalOpen" 
-                            >
-                                <div class="main-card-header mb-4">
-                                    <h4><img src="./assets/icons/card-title.svg" alt="">EMAIL CONFIRMATION</h4>
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <div class="py-5">
-                                        <h4 class="text-center mb-3">OTP CONFIRMATION</h4>
-                                        <p class="mb-4">Kindly enter the OTP sent to your mail</p>
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                            <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                        </div>
-                                        <div class="mb-5">
-                                            <button class="btn btn-primary btn-block" @click="isConfirmModalOpen=false">Submit</button>
-                                        </div>
-                                        <p class="text-center">Did not get code? <span style="color: #F8C12C; cursor: pointer;">Resend</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-card" role="dialog" tabindex="-1" 
-                                v-show="isBankModalOpen" 
-                            >
-                                <div class="main-card-header mb-4">
-                                    <h4><img src="./assets/icons/card-title.svg" alt="">Contact With Bank</h4>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label">Email Address</label>
-                                            <div class="col-7">
-                                                <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label">Password</label>
-                                            <div class="col-7">
-                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
-                                            </div>
-                                            <div class="col-1">
-                                                <span class="btn-icon">
-                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
-                                                        @click="show=!show"
-                                                    ></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label"></label>
-                                            <div class="col-7">
-                                                <button class="btn btn-primary">SUBMIT</button>
+    
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="assets/images/qRCode.png" class="mb-4" alt="">
+                                            <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                            <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                            <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                            <input type="text" class="form-control mb-3" value="Lorem ipsum">
+                                            <div>
+                                                <button class="btn btn-primary" @click="enabled='google'; isRecoveryModalOpen=false">REPLY</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="modal-card" role="dialog" tabindex="-1" 
-                                v-show="isEmailModalOpen" 
-                            >
-                                <div class="main-card-header mb-4">
-                                    <h4><img src="./assets/icons/card-title.svg" alt="">Change Account Email</h4>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label">Email Address</label>
-                                            <div class="col-8">
-                                                <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label"></label>
-                                            <div class="col-8">
-                                                <button class="btn btn-primary"
-                                                    @click="isConfirmModalOpen=true; isEmailModalOpen=false"
-                                                >UPDATE EMAIL ADDRESS</button>
-                                            </div>
-                                        </div>
+                                </modal-dialog>
+                                <modal-dialog :show="isPasswordModalOpen" v-on:close="isPasswordModalOpen=false">
+                                    <div class="main-card-header mb-4">
+                                        <h4><img src="./assets/icons/card-title.svg" alt=""> CHANGE PASSWORD</h4>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="modal-card" role="dialog" tabindex="-1" 
-                                v-show="isPasswordModalOpen" 
-                                @click.away="isPasswordModalOpen = false" 
-                                v-cloak v-transition
-                            >
-                                <div class="main-card-header mb-4">
-                                    <h4><img src="./assets/icons/card-title.svg" alt=""> CHANGE PASSWORD</h4>
-                                </div>
-
-                                <div class="row mt-5">
-                                    <div class="col-lg-6">
-                                        <div class="row mb-3">
-                                            <label class="col-4 col-form-label">Account Login</label>
-                                            <div class="col-7">
-                                                <input type="text" name="" id="" class="form-control etc-bg-gray">
+    
+                                    <div class="row mt-5">
+                                        <div class="col-lg-6">
+                                            <div class="row mb-3">
+                                                <label class="col-4 col-form-label">Account Login</label>
+                                                <div class="col-7">
+                                                    <input type="text" name="" id="" class="form-control etc-bg-gray">
+                                                </div>
+                                                
                                             </div>
+                                            <pwd-input label="New Password"></pwd-input>
+                                            <pwd-input label="Confirm Password"></pwd-input>
                                             
-                                        </div>
-                                        <div class="row mb-3" v-data="{show: false}">
-                                            <label class="col-4 col-form-label">New Password</label>
-                                            <div class="col-7">
-                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
-                                            </div>
-                                            <div class="col-1">
-                                                <span class="btn-icon">
-                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
-                                                        @click="show=!show"
-                                                    ></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3" v-data="{show: false}">
-                                            <label class="col-4 col-form-label">Confirm Password</label>
-                                            <div class="col-7">
-                                                <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
-                                            </div>
-                                            <div class="col-1">
-                                                <span class="btn-icon">
-                                                    <i class="fas" :class="show?'fa-eye-slash':'fa-eye'" 
-                                                        @click="show=!show"
-                                                    ></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row mb-3">
-                                            <div class="col-4"></div>
-                                            <div class="col-7">
-                                                <button type="button" 
-                                                    class="btn etc-btn-1 waves-effect waves-light mb-1 font-size-14 font-weight-bold"
-                                                >UPDATE PASSWORD</button>
+                                            <div class="row mb-3">
+                                                <div class="col-4"></div>
+                                                <div class="col-7">
+                                                    <button type="button" 
+                                                        class="btn etc-btn-1 waves-effect waves-light mb-1 font-size-14 font-weight-bold"
+                                                        @click="isPasswordModalOpen=false"
+                                                    >UPDATE PASSWORD</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <p class="pv-3 py-2 mt-5 d-inline-block" style="background: rgba(0, 0, 0, 0.08); border-left: 3px solid #F8C12C;">
-                                    The password should contain only numbers and letters of the alphabet. Should be in the length from 8 to15 symbols
-                                </p>
+    
+                                    <p class="ntfy mt-5">
+                                        The password should contain only numbers and letters of the alphabet. Should be in the length from 8 to15 symbols
+                                    </p>
+                                </modal-dialog>
+                                <modal-dialog :show="isConfirmModalOpen" v-on:close="isConfirmModalOpen=false">
+                                    <div class="main-card-header mb-4">
+                                        <h4><img src="./assets/icons/card-title.svg" alt="">EMAIL CONFIRMATION</h4>
+                                    </div>
+    
+                                    <div class="d-flex justify-content-center">
+                                        <div class="py-5">
+                                            <h4 class="text-center mb-3">OTP CONFIRMATION</h4>
+                                            <p class="mb-4">Kindly enter the OTP sent to your mail</p>
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                            </div>
+                                            <div class="mb-5">
+                                                <button class="btn btn-primary btn-block" @click="isConfirmModalOpen=false">Submit</button>
+                                            </div>
+                                            <p class="text-center">Did not get code? <span style="color: #F8C12C; cursor: pointer;">Resend</span></p>
+                                        </div>
+                                    </div>
+                                </modal-dialog>
+                                <modal-dialog :show="isBankModalOpen" v-on:close="isBankModalOpen=false">
+                                    <div class="main-card-header mb-4">
+                                        <h4><img src="./assets/icons/card-title.svg" alt="">Contact With Bank</h4>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="row mb-3">
+                                                <label class="col-4 col-form-label">Email Address</label>
+                                                <div class="col-7">
+                                                    <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
+                                                </div>
+                                            </div>
+                                            <pwd-input label="Password"></pwd-input>
+                                            <div class="row mb-3">
+                                                <label class="col-4 col-form-label"></label>
+                                                <div class="col-7">
+                                                    <button class="btn btn-primary" @click="isBankModalOpen=false">SUBMIT</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </modal-dialog>
+                                <modal-dialog :show="isEmailModalOpen" v-on:close="isEmailModalOpen=false">
+                                    <div class="main-card-header mb-4">
+                                        <h4><img src="./assets/icons/card-title.svg" alt="">Change Account Email</h4>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="row mb-3">
+                                                <label class="col-4 col-form-label">Email Address</label>
+                                                <div class="col-8">
+                                                    <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label class="col-4 col-form-label"></label>
+                                                <div class="col-8">
+                                                    <button class="btn btn-primary"
+                                                        @click="isConfirmModalOpen=true; isEmailModalOpen=false"
+                                                    >UPDATE EMAIL ADDRESS</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </modal-dialog>
                             </div>
-
 
                             <div class="main-card-header mb-4">
                                 <h4><img src="./assets/icons/card-title.svg" alt="">Settings</h4>
@@ -283,8 +236,8 @@
                                 </div>
                                 <div class="d-flex align-items-start mb-3">
                                     <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
-                                    <div class="d-md-flex align-items-start" style="flex:1">
-                                        <div class="ml-3">
+                                    <div class="d-md-flex justify-content-between" style="flex:1">
+                                        <div>
                                             <h5 class="mb-0">OTP Code(SMS)</h5>
                                             <p style="color: rgba(0, 0, 0, 0.4);">Receive time-sensitive authentication code messaged to your phone</p>
                                         </div>
@@ -295,9 +248,9 @@
                                         ></button>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="./assets/icons/card-title.svg" alt="">
-                                    <div class="d-md-flex justify-content-center" style="flex:3">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex justify-content-between" style="flex:3">
                                         <div class="">
                                             <h5 class="mb-0">OTP CODE (Email)</h5>
                                             <p style="color: rgba(0, 0, 0, 0.4);">Receive time-sensitive authentication code messaged to your mail</p>
@@ -356,6 +309,11 @@
 
         <?php include 'layouts-scripts.php'; ?>
 
+        <!-- Components -->
+
+        <?php include 'components/pwd-input.php'; ?>
+        <?php include 'components/modal-dialog.php'; ?>
+
         <script>
             const vm = new Vue({
                 el: '#vapp',
@@ -373,6 +331,8 @@
         </script>
 
         <script src="assets/js/app.js"></script>
+
+        
 
     </body>
 </html>
