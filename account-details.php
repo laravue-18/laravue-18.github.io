@@ -609,7 +609,7 @@
                                     </div>
                                 </div>
 
-                                <template x-if="edit">
+                                <template v-if="edit">
                                     <div>
                                         <button 
                                             class="btn btn-primary"
@@ -618,7 +618,7 @@
                                         </button>
                                         <button 
                                             class="btn btn-inactive"
-                                            @click = "edit = false"
+                                            @click.prevent = "edit = false"
                                         >
                                             Cancel
                                         </button>

@@ -181,6 +181,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -201,6 +202,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -221,6 +223,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -241,6 +244,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -261,6 +265,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -281,6 +286,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -301,6 +307,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
@@ -321,6 +328,7 @@
                                             background: #36517E;
                                             border-radius: 10px;
                                             flex: 1;
+                                            max-width: 70px;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >

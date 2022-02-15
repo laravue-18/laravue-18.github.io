@@ -23,25 +23,14 @@
             <?php include 'layouts-sidebar.php'; ?>
 
             <!-- Start right Content here -->
-            <div class="main-content">
+            <div class="main-content" id="vapp">
 
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <div class="main-card"
-                            x-data="{
-                                isEmailModalOpen: false, 
-                                isPasswordModalOpen: false, 
-                                isBankModalOpen: false, 
-                                isConfirmModalOpen: false,
-                                isRecoveryModalOpen: false,
-                                enabled: null
-                            }"
-                        >
+                        <div class="main-card">
                             <div class="modal-card" role="dialog" tabindex="-1" 
-                                x-show="isRecoveryModalOpen" 
-                                @click.away="isRecoveryModalOpen = false" 
-                                x-cloak x-transition
+                                v-show="isRecoveryModalOpen" 
                             >
                                 <div class="main-card-header mb-4">
                                     <h4><img src="./assets/icons/card-title.svg" alt="">RECOVERY CODES</h4>
@@ -61,9 +50,7 @@
                                 </div>
                             </div>
                             <div class="modal-card" role="dialog" tabindex="-1" 
-                                x-show="isConfirmModalOpen" 
-                                @click.away="isConfirmModalOpen = false" 
-                                x-cloak x-transition
+                                v-show="isConfirmModalOpen" 
                             >
                                 <div class="main-card-header mb-4">
                                     <h4><img src="./assets/icons/card-title.svg" alt="">EMAIL CONFIRMATION</h4>
@@ -82,16 +69,14 @@
                                             <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
                                         </div>
                                         <div class="mb-5">
-                                            <button class="btn btn-primary btn-block">Submit</button>
+                                            <button class="btn btn-primary btn-block" @click="isConfirmModalOpen=false">Submit</button>
                                         </div>
                                         <p class="text-center">Did not get code? <span style="color: #F8C12C; cursor: pointer;">Resend</span></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-card" role="dialog" tabindex="-1" 
-                                x-show="isBankModalOpen" 
-                                @click.away="isBankModalOpen = false" 
-                                x-cloak x-transition
+                                v-show="isBankModalOpen" 
                             >
                                 <div class="main-card-header mb-4">
                                     <h4><img src="./assets/icons/card-title.svg" alt="">Contact With Bank</h4>
@@ -105,7 +90,7 @@
                                                 <input type="text" name="" id="" class="form-control etc-bg-gray" value="sam.smith@gmail.com">
                                             </div>
                                         </div>
-                                        <div class="row mb-3" x-data="{show: false}">
+                                        <div class="row mb-3">
                                             <label class="col-4 col-form-label">Password</label>
                                             <div class="col-7">
                                                 <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
@@ -128,9 +113,7 @@
                                 </div>
                             </div>
                             <div class="modal-card" role="dialog" tabindex="-1" 
-                                x-show="isEmailModalOpen" 
-                                @click.away="isEmailModalOpen = false" 
-                                x-cloak x-transition
+                                v-show="isEmailModalOpen" 
                             >
                                 <div class="main-card-header mb-4">
                                     <h4><img src="./assets/icons/card-title.svg" alt="">Change Account Email</h4>
@@ -157,9 +140,9 @@
                             </div>
 
                             <div class="modal-card" role="dialog" tabindex="-1" 
-                                x-show="isPasswordModalOpen" 
+                                v-show="isPasswordModalOpen" 
                                 @click.away="isPasswordModalOpen = false" 
-                                x-cloak x-transition
+                                v-cloak v-transition
                             >
                                 <div class="main-card-header mb-4">
                                     <h4><img src="./assets/icons/card-title.svg" alt=""> CHANGE PASSWORD</h4>
@@ -174,7 +157,7 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="row mb-3" x-data="{show: false}">
+                                        <div class="row mb-3" v-data="{show: false}">
                                             <label class="col-4 col-form-label">New Password</label>
                                             <div class="col-7">
                                                 <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
@@ -187,7 +170,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="row mb-3" x-data="{show: false}">
+                                        <div class="row mb-3" v-data="{show: false}">
                                             <label class="col-4 col-form-label">Confirm Password</label>
                                             <div class="col-7">
                                                 <input :type="show?'text':'password'" name="" id="" class="form-control etc-bg-gray" value="">
@@ -212,7 +195,7 @@
                                     </div>
                                 </div>
 
-                                <p class="px-3 py-2 mt-5 d-inline-block" style="background: rgba(0, 0, 0, 0.08); border-left: 3px solid #F8C12C;">
+                                <p class="pv-3 py-2 mt-5 d-inline-block" style="background: rgba(0, 0, 0, 0.08); border-left: 3px solid #F8C12C;">
                                     The password should contain only numbers and letters of the alphabet. Should be in the length from 8 to15 symbols
                                 </p>
                             </div>
@@ -222,115 +205,109 @@
                                 <h4><img src="./assets/icons/card-title.svg" alt="">Settings</h4>
                             </div>
 
-                            <div class="d-flex align-items-center mb-3">
-                                <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Login Information</h4>
-                                <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
-                            </div>
-                            <div class="d-md-flex justify-content-between mb-3">
-                                <div class="d-flex align-items-start" style="flex:3">
-                                    <img src="./assets/icons/card-title.svg" alt="">
-                                    <div class="ml-3">
-                                        <h5 class="mb-0">Email Address</h5>
-                                        <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
-                                    </div>
-                                </div>
-                                <div style="flex:2">
-                                    sam.smith@gmail.com
-                                </div>
-                                <div>
-                                    <button class="btn etc-btn-1 etc-bg-gray" @click="isEmailModalOpen=true">Change</button>
-                                </div>
-
-                            </div>
-                            <div class="d-md-flex justify-content-between mb-3">
-                                <div class="d-flex align-items-start" style="flex:3">
-                                    <img src="./assets/icons/card-title.svg" alt="">
-                                    <div class="ml-3">
-                                        <h5 class="mb-0">Password</h5>
-                                        <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
-                                    </div>
-                                </div>
-                                <div style="flex:2">
-                                    *****************
-                                </div>
-                                <div>
-                                    <button class="btn etc-btn-1 etc-bg-gray" @click="isPasswordModalOpen=true">Change</button>
-                                </div>
-
-                            </div>
-                            <div class="d-md-flex justify-content-between mb-3">
-                                <div class="d-flex align-items-start" style="flex:3">
-                                    <img src="./assets/icons/card-title.svg" alt="">
-                                    <div class="ml-3">
-                                        <h5 class="mb-0">Automatic connect to Ebank</h5>
-                                        <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
-                                    </div>
-                                </div>
-                                <div style="flex:2">
-                                    sam.smith@gmail.com
-                                </div>
-                                <div>
-                                    <button class="btn etc-btn-1 etc-bg-gray" @click="isBankModalOpen=true">Change</button>
-                                </div>
-
-                            </div>
-
-                            <div class="d-flex align-items-center mb-3">
-                                <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Two-Factor Authentication</h4>
-                                <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
-                            </div>
-                            
                             <div>
-                                <div class="d-md-flex justify-content-between mb-3">
-                                    <div class="d-flex align-items-start" style="flex:3">
-                                        <img src="./assets/icons/card-title.svg" alt="">
-                                        <div class="ml-3">
-                                            <h5 class="mb-0">Google Authenticator</h5>
-                                            <p style="color: rgba(0, 0, 0, 0.4);">Use an app to genearte time- sensitive authentication codes on your phone </p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Login Information</h4>
+                                    <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
+                                </div>
+    
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex justify-content-between" style="flex: 1">
+                                        <div class="mb-2" style="flex: 2;">
+                                            <h5>Email Address</h5>
+                                            <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <button class="btn" 
-                                            :class="enabled=='google'?'btn-success':'btn-inactive'" 
-                                            x-text="enabled=='google'?'Enabled':'Enable'"
-                                            @click="isRecoveryModalOpen=true"
-                                        ></button>
+                                        <div class="mb-2" style="flex:2">
+                                            sam.smith@gmail.com
+                                        </div>
+                                        <div class="mb-2">
+                                            <button class="btn etc-btn-1 etc-bg-gray" @click="isEmailModalOpen=true">Change</button>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+    
+                                    <div class="d-md-flex justify-content-between" style="flex: 1">
+                                        <div style="flex: 2">
+                                            <h5 class="mb-0">Password</h5>
+                                            <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
+                                        </div>
+                                        <div class="mb-2" style="flex:2">
+                                            *****************
+                                        </div>
+                                        <div>
+                                            <button class="btn etc-btn-1 etc-bg-gray" @click="isPasswordModalOpen=true">Change</button>
+                                        </div>
                                     </div>
     
                                 </div>
-                                <div class="d-md-flex justify-content-between mb-3">
-                                    <div class="d-flex align-items-start" style="flex:3">
-                                        <img src="./assets/icons/card-title.svg" alt="">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex align-items-start" style="flex:1">
+                                        <div class="mb-2" style="flex: 2">
+                                            <h5 class="mb-0">Automatic connect to Ebank</h5>
+                                            <p style="color: rgba(0, 0, 0, 0.4);">Protect your account and transactions</p>
+                                        </div>
+                                        <div class="mb-2" style="flex:2">
+                                            sam.smith@gmail.com
+                                        </div>
+                                        <div>
+                                            <button class="btn etc-btn-1 etc-bg-gray" @click="isBankModalOpen=true">Change</button>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <h4 class="font-weight-bold font-size-18 mb-0 mr-5">Two-Factor Authentication</h4>
+                                    <div class="etc-bg-gray" style="flex: 1; height: 10px;"></div>
+                                </div>
+                            
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex justify-content-between" style="flex:3">
+                                        <div class="mb-2">
+                                            <h5 class="mb-0">Google Authenticator</h5>
+                                            <p style="color: rgba(0, 0, 0, 0.4);">Use an app to genearte time- sensitive authentication codes on your phone </p>
+                                        </div>
+                                        <button class="btn" 
+                                            :class="enabled=='google'?'btn-success':'btn-inactive'" 
+                                            v-text="enabled=='google'?'Enabled':'Enable'"
+                                            @click="isRecoveryModalOpen=true"
+                                        ></button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start mb-3">
+                                    <img class="mr-3" src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex align-items-start" style="flex:1">
                                         <div class="ml-3">
                                             <h5 class="mb-0">OTP Code(SMS)</h5>
                                             <p style="color: rgba(0, 0, 0, 0.4);">Receive time-sensitive authentication code messaged to your phone</p>
                                         </div>
-                                    </div>
-                                    <div>
                                         <button class="btn" 
                                             :class="enabled=='sms'?'btn-success':'btn-inactive'" 
-                                            x-text="enabled=='sms'?'Enabled':'Enable'"
+                                            v-text="enabled=='sms'?'Enabled':'Enable'"
                                             @click="enabled='sms'"
                                         ></button>
                                     </div>
-    
                                 </div>
-                                <div class="d-md-flex justify-content-between mb-3">
-                                    <div class="d-flex align-items-start" style="flex:3">
-                                        <img src="./assets/icons/card-title.svg" alt="">
-                                        <div class="ml-3">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./assets/icons/card-title.svg" alt="">
+                                    <div class="d-md-flex justify-content-center" style="flex:3">
+                                        <div class="">
                                             <h5 class="mb-0">OTP CODE (Email)</h5>
                                             <p style="color: rgba(0, 0, 0, 0.4);">Receive time-sensitive authentication code messaged to your mail</p>
                                         </div>
-                                    </div>
-                                    <div>
                                         <button class="btn" 
                                             :class="enabled=='email'?'btn-success':'btn-inactive'" 
-                                            x-text="enabled=='email'?'Enabled':'Enable'"
+                                            v-text="enabled=='email'?'Enabled':'Enable'"
                                             @click="enabled='email'"
                                         ></button>
                                     </div>
-    
                                 </div>
                             </div>
 
@@ -378,6 +355,22 @@
         <?php include 'layouts-right-sidebar.php'; ?>
 
         <?php include 'layouts-scripts.php'; ?>
+
+        <script>
+            const vm = new Vue({
+                el: '#vapp',
+                data(){
+                    return {
+                        isEmailModalOpen: false, 
+                        isPasswordModalOpen: false, 
+                        isBankModalOpen: false, 
+                        isConfirmModalOpen: false,
+                        isRecoveryModalOpen: false,
+                        enabled: null
+                    }
+                }
+            })
+        </script>
 
         <script src="assets/js/app.js"></script>
 
