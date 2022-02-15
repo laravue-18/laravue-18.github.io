@@ -3445,6 +3445,7 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
   box-sizing: border-box;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 .account-card:hover{
   transform: translate(-2px, -2px);
