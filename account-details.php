@@ -25,7 +25,7 @@
             <!-- Start right Content here -->
             <div class="main-content">
 
-                <div class="page-content">
+                <div class="page-content" id="vapp">
                     <div class="container-fluid">
 
                         <div class="main-card">
@@ -33,11 +33,11 @@
                                 <h4><img src="./assets/icons/card-title.svg" alt="">ACCOUNT DETAILS</h4>
                             </div>
 
-                            <form x-data="{edit: false}" class="mt-4">
+                            <form class="mt-4">
                                 <div class="d-flex align-items-center">
                                     <h4 class="font-weight-bold font-size-18 mb-0">General Information</h4>
                                     <button 
-                                        x-show="!edit"
+                                        v-show="!edit"
                                         class="btn btn-sm btn-rounded etc-btn-1 waves-effect waves-light font-size-12 font-weight-bold px-3 py-1 mx-3"
                                         @click.prevent = "edit = true"
                                     >
@@ -641,6 +641,17 @@
         <?php include 'layouts-right-sidebar.php'; ?>
 
         <?php include 'layouts-scripts.php'; ?>
+
+        <script>
+            const vm = new Vue({
+                el: '#vapp',
+                data(){
+                    return {
+                        edit: false
+                    }
+                }
+            })
+        </script>
 
         <script src="assets/js/app.js"></script>
 

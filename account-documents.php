@@ -27,27 +27,23 @@
             <!-- Start right Content here -->
             <div class="main-content">
 
-                <div class="page-content">
+                <div class="page-content" id="vapp">
                     <div class="container-fluid">
 
                         <div class="main-card position-relative"
-                            x-data="{
-                                'isModalOpen': false
-                            }"
+                           
                         >
                             <div
                                 class="modal-card main-card p-0 overflow-hidden"
                                 role="dialog"
                                 tabindex="-1"
-                                x-show="isModalOpen"
-                                x-transition
-                                x-cloak
+                                v-show="isModalOpen"
                             >
                                 <div class="d-md-flex align-items-stretch">
                                     <div style="flex: 1; background: rgba(0, 0, 0, 0.06);">
-                                        <div class="p-4"  x-data="{type: null}">
-                                            <select name="" id="" class="form-control rounded" x-model="type">
-                                                <option> Document Type </option>
+                                        <div class="p-4">
+                                            <select name="" id="" class="form-control rounded" v-model="type">
+                                                <option value=""> Document Type </option>
                                                 <optgroup label="Proof of ID" data-description="proof-of-id-text">
                                                     <option value="0">National Identity Card</option>
                                                     <option value="1">Passport</option>
@@ -68,7 +64,7 @@
                                             </div>
                                             <hr>
 
-                                            <template x-if="type==0 || type==1 || type==2">
+                                            <template v-if="type==0 || type==1 || type==2">
                                                 <div class="pr-2">
                                                     <h5 class="mt-4 mb-3">e.g. Passport | National ID | Drivers Licence </h5>
                                                     <div class="d-flex align-items-start mb-2">
@@ -97,7 +93,7 @@
                                                     </div>
                                                 </div>
                                             </template>
-                                            <template x-if="type==3 || type==4 || type==5 || type==6 || type==7">
+                                            <template v-if="type==3 || type==4 || type==5 || type==6 || type==7">
                                                 <div class="pr-2">
                                                     <h5 class="mt-4 mb-3">e.g. Utility bill | Phone/Internet Bill | Bank </h5>
                                                     <div class="d-flex align-items-start mb-2">
@@ -127,7 +123,7 @@
                                     <div style="flex: 2">
                                         <div class="d-flex flex-column justify-content-between h-100">
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn" aria-label="Close" x-on:click="isModalOpen=false">✖</button>  
+                                                <button class="btn" aria-label="Close" @click="isModalOpen=false">✖</button>  
                                             </div>
 
                                             <div class="p-5">
@@ -181,16 +177,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3">
                                             <h5>All Documents</h5>
                                             <span>20 files</span>
                                         </div>
@@ -201,16 +197,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3">
                                             <h5>All Documents</h5>
                                             <span>1 files</span>
                                         </div>
@@ -221,16 +217,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3;">
                                             <h5>Customer Account Agreement</h5>
                                             <span>20 files</span>
                                         </div>
@@ -241,16 +237,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3">
                                             <h5>Customer Account Agreement</h5>
                                             <span>20 files</span>
                                         </div>
@@ -261,16 +257,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3;">
                                             <h5>Passport</h5>
                                             <span>20 files</span>
                                         </div>
@@ -281,16 +277,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3">
                                             <h5>Passport</h5>
                                             <span>20 files</span>
                                         </div>
@@ -301,16 +297,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3;">
                                             <h5>National ID</h5>
                                             <span>20 files</span>
                                         </div>
@@ -321,16 +317,16 @@
                                     <a href="" target="_blank">
                                     <div class="d-flex p-3 align-items-center mr-3" style="background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.08); box-sizing: border-box; border-radius: 10px;">
                                         <div style="
-                                            width: 70px;
                                             height: 70px;
                                             background: #36517E;
                                             border-radius: 10px;
+                                            flex: 1;
                                         "
                                             class="d-flex align-items-center justify-content-center mr-4"
                                         >
                                             <img src="./assets/icons/document1.svg" alt="">
                                         </div>
-                                        <div>
+                                        <div style="flex: 3;">
                                             <h5>National ID</h5>
                                             <span>20 files</span>
                                         </div>
@@ -356,6 +352,17 @@
         <?php include 'layouts-scripts.php'; ?>
 
         <script>
+            const vm = new Vue({
+                el: '#vapp',
+                data(){
+                    return {
+                        isModalOpen: false,
+                        type: '',
+
+                    }
+                }
+            })
+
             $(document).ready(function(){
                 $(document).on('click','.file-button', function() {
                     $('.file-input').click();
@@ -387,7 +394,6 @@
                   evt.preventDefault();
                 };
             })
-                // Dropzone.autoDiscover = false;
     
         </script>
 

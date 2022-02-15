@@ -196,7 +196,8 @@ body[data-sidebar="dark"] .logo-light {
 
 @media (max-width: 380px) {
   .navbar-brand-box {
-    display: none; } }
+    /* display: none; */
+   } }
 
 body[data-layout="horizontal"] .navbar-brand-box {
   width: auto; }
