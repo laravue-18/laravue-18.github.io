@@ -142,7 +142,7 @@
                                         <div class="row mb-3">
                                             <label class="col-4 col-form-label">Birthday</label>
                                             <div class="col-8">
-                                                <input type="date" name="" id="" class="form-control" :disabled="!edit">
+                                                <input type="date" name="" id="" class="form-control" :max="currentDay" :disabled="!edit">
                                             </div>
                                         </div>
                                     </div>
@@ -189,6 +189,18 @@
                         edit: false,
                         countries: [],
                         country: ''
+                    }
+                },
+                computed: {
+                    currentDay(){
+                        var today = new Date();
+                        var dd = String(today.getDate()).padStart(2, '0');
+                        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                        var yyyy = today.getFullYear();
+
+                        today = yyyy + '-' + mm + '-' + dd
+                        
+                        return today
                     }
                 },
                 created(){

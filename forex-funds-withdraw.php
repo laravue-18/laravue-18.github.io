@@ -31,7 +31,7 @@
                         <div class="main-card">
                             <div class="main-card-header mb-4">
                                 <h4>
-                                    <img src="./assets/icons/card-title.svg" alt=""> DEPOSIT
+                                    <img src="./assets/icons/card-title.svg" alt=""> Withdraw
                                 </h4>
                             </div>
 
@@ -79,27 +79,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -150,27 +139,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -221,27 +199,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -292,27 +259,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -363,27 +319,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -434,27 +379,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
@@ -505,27 +439,16 @@
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Deposit Amount</label>
+                                                <label class="col-4 col-form-label">Withdraw Amount</label>
                                                 <div class="col-8">
                                                     <input type="number" name="" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload A TTP Copy File</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-4 col-form-label">Upload Invoice</label>
-                                                <div class="col-8">
-                                                    <input type="file" name="" id="" class="form-control">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row mb-3">
                                                 <label class="col-4 col-form-label"></label>
                                                 <div class="col-8">
-                                                    <button type="button" class="btn btn-primary">DEPOSIT</button>
+                                                    <button type="button" class="btn btn-primary">Withdraw</button>
                                                 </div>
                                                 
                                             </div>
