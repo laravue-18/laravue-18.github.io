@@ -39,10 +39,88 @@
                     <img src="assets/icons/light_mode.svg">
                 </button>
             </div>
-            <div class="dropdown d-none d-lg-inline-block ml-1">
-                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="">
+            <div class="dropdown d-inline-block d-lg-inline-block ml-1">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="dropdown">
                     <img src="assets/icons/notification.svg">
                 </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-notifications-dropdown">
+                    <!-- <div class="arrow"></div> -->
+                    <div class="p-3">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="m-0"> Notifications </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-simplebar="init" style="max-height: 230px;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px;">
+                        <a href="" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span style="display:block;width:1rem; height:1rem;border-radius:0.5rem; background-color: green;">
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                    </div>
+                                </div>
+                                <div>✖</div>
+                            </div>
+                        </a>
+                        <a href="" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span style="display:block;width:1rem; height:1rem;border-radius:0.5rem; background-color: green;">
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                    </div>
+                                </div>
+                                <div>✖</div>
+                            </div>
+                        </a>
+                        <a href="" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span style="display:block;width:1rem; height:1rem;border-radius:0.5rem; background-color: green;">
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                    </div>
+                                </div>
+                                <div>✖</div>
+                            </div>
+                        </a>
+                        <a href="" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span style="display:block;width:1rem; height:1rem;border-radius:0.5rem; background-color: green;">
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                    </div>
+                                </div>
+                                <div>✖</div>
+                            </div>
+                        </a>
+                        
+                    </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div></div>
+                    <div class="p-2 border-top">
+                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="notifications.php">
+                            <i class="mdi mdi-arrow-right-circle mr-1"></i> View All
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="dropdown d-inline-block">

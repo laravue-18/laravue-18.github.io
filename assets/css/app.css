@@ -39,7 +39,7 @@ body{
   height: 70px;
   padding: 0 calc(24px / 2) 0 0; }
   .navbar-header .dropdown.show .header-item {
-    background-color: #f8f9fa; }
+    background-color: transparent; }
 
 .navbar-brand-box {
   padding: 0 1.5rem;
@@ -3430,7 +3430,7 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
 
 .main-card h4{
   color: #000000;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .main-card-header{
@@ -3543,6 +3543,7 @@ body[data-sidebar="dark"] #sidebar-menu ul li a:hover svg{ fill: #F8C12C;}
 
 .etc-bg-gray{ background: rgba(0, 0, 0, 0.04); }
 .etc-bg-gray-2{ background: rgba(0, 0, 0, 0.2); }
+.bg-gray{ background-color: #F3F3F3;}
 
 .form-control{
   border-radius: 0;
@@ -3675,4 +3676,44 @@ a, a:hover{ color: inherit; }
 .modal-leave-to .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.main-card .tab{
+  cursor: default;
+}
+
+.main-card .tab:hover{
+  color: #36517E;
+}
+
+.main-card .tab.active{
+  border-bottom: 2px solid #F8C12C;
+}
+
+.dropdown-menu .arrow:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 14px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+.dropdown-menu.show {
+  top: 95%!important;
+}
+
+.notification-msg{
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  margin-bottom: 1rem;
+}
+
+.notification-msg:hover{
+  background: rgba(54, 81, 126, 0.1);
+}
+
+.otp-in{
+  padding-left: 0;
+  padding-right: 0;
 }

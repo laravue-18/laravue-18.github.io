@@ -34,21 +34,258 @@
 
                         <div class="main-card">
                             <div class="main-card-header d-md-flex align-items-center" style="border-bottom: 1px solid rgba(0, 0, 0, 0.4);">
-                                <h4 class="font-size-16 mr-4 mb-2">
+                                <h4 class="font-size-16 mr-4 mb-2 tab" @click="activeTab='all'">
                                     <img src="./assets/images/all.png" alt="" class="mr-2">ALL
                                 </h4>
-                                <h4 class="font-size-16 mr-4 mb-2">
+                                <h4 class="font-size-16 mr-4 mb-2 tab" @click="activeTab='deposit'">
                                     <img src="./assets/images/deposit.png" alt="" class="mr-2">DEPOSIT
                                 </h4>
-                                <h4 class="font-size-16 mr-4 mb-2">
+                                <h4 class="font-size-16 mr-4 mb-2 tab" @click="activeTab='withdraw'">
                                     <img src="./assets/images/withdraw.png" alt="" class="mr-2">WITHDRAW
                                 </h4>
-                                <h4 class="font-size-16 mr-4 mb-2">
+                                <h4 class="font-size-16 mr-4 mb-2 tab" @click="activeTab='internal-transfer'">
                                     <img src="./assets/images/internal.png" alt="" class="mr-2">INTERNAL TRANSFER
                                 </h4>
                             </div>
                             
-                            <div class="row mt-4 mb-5">
+                            <div v-if="activeTab=='all'" class="row mt-4 mb-5">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Internal Transfer</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Deposit</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Widthraw</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="activeTab=='deposit'" class="row mt-4 mb-5">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Deposit</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Deposit</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="activeTab=='withdraw'" class="row mt-4 mb-5">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Withdraw</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="border p-2 mb-2">
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Type:</span>
+                                            <span>Withdraw</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Via:</span>
+                                            <span>9113</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Account:</span>
+                                            <span>910000052</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Amount:</span>
+                                            <span>10 USD</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Details:</span>
+                                            <span>Loreum Ipsum is simple</span>
+                                        </div>
+                                        <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
+                                            <span>Data:</span>
+                                            <span>2021.12.28T23:56:07.000Z</span>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Status</span>
+                                            <div class="rounded-circle etc-bg-3" style="width: 10px; height: 10px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="activeTab=='internal-transfer'" class="row mt-4 mb-5">
                                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                     <div class="border p-2 mb-2">
                                         <div class="etc-bg-2 rounded-lg p-2  d-flex justify-content-between align-items-center mb-1">
@@ -144,8 +381,13 @@
         <?php include 'layouts-scripts.php'; ?>
 
         <script>
-            $(function () {
-                $('[data-toggle="popover"]').popover()
+            const vm = new Vue({
+                el: '#vapp',
+                data(){
+                    return {
+                        activeTab: 'all'
+                    }
+                }
             })
         </script>
 

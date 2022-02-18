@@ -10,6 +10,22 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
+        <style>
+            input[type="number"] {
+                appearance: textfield;
+                -webkit-appearance: textfield;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+            input[type="number"]:nth-of-type(n+4) {
+                order: 2;
+            }
+        </style>
+
         <?php include 'layouts-head.php' ?>
 
     </head>
@@ -91,12 +107,12 @@
                                             <h4 class="text-center mb-3">OTP CONFIRMATION</h4>
                                             <p class="mb-4">Kindly enter the OTP sent to your mail</p>
                                             <div class="d-flex justify-content-between mb-4">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
-                                                <input type="text" class="form-control text-center rounded" style="width: 2rem;" maxlength="1">
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*"  value="" inputtype="numeric" autocomplete="one-time-code" id="otp-in1" required>
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*" id="otp-in2" required>
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*" id="otp-in3" required>
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*" id="otp-in4" required>
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*" id="otp-in5" required>
+                                                <input type="number" inputtype="numeric" class="form-control text-center rounded otp-in" style="width: 2rem;" type="text" pattern="[0-9]*" id="otp-in6" required>
                                             </div>
                                             <div class="mb-5">
                                                 <button class="btn btn-primary btn-block" @click="isConfirmModalOpen=false">Submit</button>
@@ -322,11 +338,66 @@
                         isEmailModalOpen: false, 
                         isPasswordModalOpen: false, 
                         isBankModalOpen: false, 
-                        isConfirmModalOpen: false,
+                        isConfirmModalOpen: true,
                         isRecoveryModalOpen: false,
                         enabled: null
                     }
                 }
+            })
+        </script>
+
+        <script>
+            $(function(){
+                let in1 = document.getElementById('otp-in1'),
+                ins = document.querySelectorAll('.otp-in');
+
+                ins.forEach(function(input) {
+                    input.addEventListener('keyup', function(e){
+                        // Break if Shift, Tab, CMD, Option, Control.
+                        if (e.keyCode === 16 || e.keyCode == 9 || e.keyCode == 224 || e.keyCode == 18 || e.keyCode == 17) {
+                            return;
+                        }
+                        
+                        // On Backspace or left arrow, go to the previous field.
+                        if ( (e.keyCode === 8 || e.keyCode === 37) && this.previousElementSibling && this.previousElementSibling.tagName === "INPUT" ) {
+                            this.previousElementSibling.select();
+                        } else if (e.keyCode !== 8 && this.nextElementSibling) {
+                            this.nextElementSibling.select();
+                        }
+                    });
+                    
+                    /**
+                    * Better control on Focus
+                    * - don't allow focus on other field if the first one is empty
+                    * - don't allow focus on field if the previous one if empty (debatable)
+                    * - get the focus on the first empty field
+                    */
+                    input.addEventListener('focus', function(e) {
+                        // If the focus element is the first one, do nothing
+                        if ( this === in1 ) return;
+                        
+                        // If value of input 1 is empty, focus it.
+                        if ( in1.value == '' ) {
+                            in1.focus();
+                        }
+                        
+                        // If value of a previous input is empty, focus it.
+                        // To remove if you don't wanna force user respecting the fields order.
+                        if ( this.previousElementSibling.value == '' ) {
+                            this.previousElementSibling.focus();
+                        }
+                    });
+                });
+
+                in1.addEventListener('input', function(e) {
+                    let data = e.data || this.value; // Chrome doesn't get the e.data, it's always empty, fallback to value then.
+                    if ( ! data ) return; // Shouldn't happen, just in case.
+                    if ( data.length === 1 ) return; // Here is a normal behavior, not a paste action.
+                    
+                    for (i = 0; i < data.length; i++ ) {
+                        ins[i].value = data[i];
+                    }
+                });
             })
         </script>
 

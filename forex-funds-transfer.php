@@ -49,7 +49,7 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6">
                                     <div class="row mb-3">
-                                        <label class="col-4 col-form-label">Transfer Form</label>
+                                        <label class="col-4 col-form-label">Transfer From</label>
                                         <div class="col-7">
                                             <select name="" id="" class="form-control">
                                                 <option value="" disabled hidden>Select...</option>
@@ -61,9 +61,20 @@
                                     <div class="row mb-3">
                                         <label class="col-4 col-form-label">Transfer To</label>
                                         <div class="col-7">
-                                            <select name="" id="" class="form-control">
+                                            <select name="" id="" class="form-control" v-model="transferTo">
                                                 <option value="" disabled hidden>Select...</option>
+                                                <option value="other">Other Account</option>
+                                                <option value="914562">914562</option>
+                                                <option value="914563">914563 </option>
+                                                <option value="914564">914564 </option>
                                             </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div v-if="transferTo=='other'" class="row mb-3">
+                                        <label class="col-4 col-form-label"></label>
+                                        <div class="col-7">
+                                            <input type="text" name="other-account" class="form-control">
                                         </div>
                                         
                                     </div>
@@ -128,7 +139,8 @@
                 el: '#vapp',
                 data(){
                     return {
-                        isTermsModalOpen: false
+                        isTermsModalOpen: false,
+                        transferTo: ''
                     }
                 },
                 created(){
